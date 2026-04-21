@@ -180,7 +180,7 @@ export default function Home() {
       }),
       { threshold: 0.05 }
     );
-    ctaRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    document.querySelectorAll(".reveal, .reveal-scale").forEach((el) => observer.observe(el));
 
     const statsObs = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) { setStatsVisible(true); statsObs.disconnect(); } },
@@ -230,16 +230,16 @@ export default function Home() {
               {/* Display headline */}
               <h1 className="font-extrabold tracking-tight leading-[0.90] mb-8">
                 <span className="block text-[clamp(48px,9vw,118px)] text-[#111]">
-                  <span className="word-reveal" style={{ animationDelay: "120ms" }}>Michael</span>{" "}
-                  <span className="word-reveal" style={{ animationDelay: "240ms" }}>Do</span>                </span>
-                <span className="block text-[clamp(34px,6vw,76px)] text-[#ccc]">
-                  <span className="word-reveal" style={{ animationDelay: "440ms" }}>building</span>{" "}
-                  <span className="word-reveal" style={{ animationDelay: "540ms" }}>digital</span>
-                </span>
+                  <span className="word-reveal word-hover" style={{ animationDelay: "120ms" }}>Michael</span>{" "}
+                  <span className="word-reveal word-hover" style={{ animationDelay: "240ms" }}>Do</span>                </span>
                 <span className="block text-[clamp(34px,6vw,76px)] text-[#111]">
-                  <span className="word-reveal" style={{ animationDelay: "640ms" }}>products</span>{" "}
-                  <span className="word-reveal" style={{ animationDelay: "740ms" }}>at</span>{" "}
-                  <span className="word-reveal text-blue-shimmer" style={{ animationDelay: "860ms" }}>scale.</span>
+                  <span className="word-reveal word-hover" style={{ animationDelay: "440ms" }}>building</span>{" "}
+                  <span className="word-reveal word-hover" style={{ animationDelay: "520ms" }}>products</span>{" "}
+                  <span className="word-reveal word-hover" style={{ animationDelay: "600ms" }}>at</span>{" "}
+                  <span className="word-reveal word-hover" style={{ animationDelay: "680ms" }}>scale</span>{" "}
+                  <span className="word-reveal word-hover" style={{ animationDelay: "760ms" }}>and</span>{" "}
+                  <span className="word-reveal word-hover" style={{ animationDelay: "840ms" }}>actually</span>{" "}
+                  <span className="word-reveal word-hover" style={{ animationDelay: "920ms" }}>matter.</span>
                 </span>
               </h1>
 
@@ -311,6 +311,144 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Work Previews ── */}
+      <section className="relative z-10 px-6 pb-16 max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="flex items-baseline justify-between mb-6">
+          <p className="text-xs tracking-[0.15em] uppercase text-[#999]">Work Projects</p>
+          <Link href="/work" className="text-xs text-[#999] hover:text-[#1a56ff] transition-colors">
+            View all →
+          </Link>
+        </div>
+
+        {/* Row 1 — portrait mobile apps (tall) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+
+          {/* Scotia Wealth — wide portrait */}
+          <Link href="/work#project-01"
+            className="reveal-scale md:col-span-2 group flex flex-col rounded-2xl border border-[#ebebeb] overflow-hidden hover:border-[#1a56ff]/25 hover:shadow-[0_8px_32px_rgba(26,86,255,0.09)] transition-all duration-300">
+            <div className="overflow-hidden bg-[#f5f5f5] aspect-[4/3]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://www.scotiawealthmanagement.com/content/experience-fragments/scotiabank/swm/swm_app_and_web_lp/swm-app-lp---chapters---asset-mix---en/master/_jcr_content/root/section_container_co/section-container-par/image.img.png/1727804299664.png"
+                alt="Scotia Wealth Management App"
+                className="w-full h-full object-cover object-top transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+              />
+            </div>
+            <div className="flex items-center justify-between px-5 py-4 bg-white border-t border-[#f4f4f4]">
+              <div>
+                <p className="text-xs text-[#bbb] mb-0.5">Scotiabank Digital · 01</p>
+                <p className="text-sm font-semibold text-[#111] group-hover:text-[#1a56ff] transition-colors duration-200">
+                  Scotia Wealth Management App
+                </p>
+                <p className="text-xs text-[#999] mt-1">200K wealth clients · 5 markets</p>
+              </div>
+              <span className="text-[#ccc] group-hover:text-[#1a56ff] group-hover:translate-x-1 transition-all duration-200 text-base flex-shrink-0 ml-4">→</span>
+            </div>
+          </Link>
+
+          {/* Scotia Mobile — narrow portrait */}
+          <Link href="/work#project-03"
+            className="reveal-scale group flex flex-col rounded-2xl border border-[#ebebeb] overflow-hidden hover:border-[#1a56ff]/25 hover:shadow-[0_8px_32px_rgba(26,86,255,0.09)] transition-all duration-300"
+            style={{ transitionDelay: "80ms" }}>
+            <div className="overflow-hidden bg-[#f5f5f5] aspect-[3/4]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/scotia-mobile-home.webp"
+                alt="Scotia Mobile Banking App"
+                className="w-full h-full object-cover object-top transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+              />
+            </div>
+            <div className="flex items-center justify-between px-5 py-4 bg-white border-t border-[#f4f4f4]">
+              <div>
+                <p className="text-xs text-[#bbb] mb-0.5">Scotiabank Digital · 03</p>
+                <p className="text-sm font-semibold text-[#111] group-hover:text-[#1a56ff] transition-colors duration-200">
+                  Scotia Mobile Banking
+                </p>
+                <p className="text-xs text-[#999] mt-1">3M+ active users</p>
+              </div>
+              <span className="text-[#ccc] group-hover:text-[#1a56ff] group-hover:translate-x-1 transition-all duration-200 text-base flex-shrink-0 ml-4">→</span>
+            </div>
+          </Link>
+        </div>
+
+        {/* Row 2 — landscape web platforms (wide) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+          {/* Online Banking */}
+          <Link href="/work#project-02"
+            className="reveal-scale group flex flex-col rounded-2xl border border-[#ebebeb] overflow-hidden hover:border-[#1a56ff]/25 hover:shadow-[0_8px_32px_rgba(26,86,255,0.09)] transition-all duration-300"
+            style={{ transitionDelay: "60ms" }}>
+            <div className="overflow-hidden bg-[#f5f5f5] aspect-[16/9]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/scotiabank-online-banking.png"
+                alt="Scotia Online Banking"
+                className="w-full h-full object-cover object-top transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+              />
+            </div>
+            <div className="flex items-center justify-between px-5 py-4 bg-white border-t border-[#f4f4f4]">
+              <div>
+                <p className="text-xs text-[#bbb] mb-0.5">Scotiabank Digital · 02</p>
+                <p className="text-sm font-semibold text-[#111] group-hover:text-[#1a56ff] transition-colors duration-200">
+                  Scotia Online Banking
+                </p>
+                <p className="text-xs text-[#999] mt-1">2M+ active users</p>
+              </div>
+              <span className="text-[#ccc] group-hover:text-[#1a56ff] group-hover:translate-x-1 transition-all duration-200 text-base flex-shrink-0 ml-4">→</span>
+            </div>
+          </Link>
+
+          {/* National Post */}
+          <Link href="/work#project-04"
+            className="reveal-scale group flex flex-col rounded-2xl border border-[#ebebeb] overflow-hidden hover:border-[#1a56ff]/25 hover:shadow-[0_8px_32px_rgba(26,86,255,0.09)] transition-all duration-300"
+            style={{ transitionDelay: "140ms" }}>
+            <div className="overflow-hidden bg-[#f5f5f5] aspect-[16/9]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/nationalpost-homepage.png"
+                alt="National Post Relaunch"
+                className="w-full h-full object-cover object-top transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+              />
+            </div>
+            <div className="flex items-center justify-between px-5 py-4 bg-white border-t border-[#f4f4f4]">
+              <div>
+                <p className="text-xs text-[#bbb] mb-0.5">Postmedia Digital · 04</p>
+                <p className="text-sm font-semibold text-[#111] group-hover:text-[#1a56ff] transition-colors duration-200">
+                  National Post Relaunch
+                </p>
+                <p className="text-xs text-[#999] mt-1">130+ sites migrated</p>
+              </div>
+              <span className="text-[#ccc] group-hover:text-[#1a56ff] group-hover:translate-x-1 transition-all duration-200 text-base flex-shrink-0 ml-4">→</span>
+            </div>
+          </Link>
+
+          {/* WellnessLiving */}
+          <Link href="/work#project-05"
+            className="reveal-scale group flex flex-col rounded-2xl border border-[#ebebeb] overflow-hidden hover:border-[#1a56ff]/25 hover:shadow-[0_8px_32px_rgba(26,86,255,0.09)] transition-all duration-300"
+            style={{ transitionDelay: "220ms" }}>
+            <div className="overflow-hidden bg-[#f5f5f5] aspect-[16/9]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://www.wellnessliving.com/knowledge-sharing/wp-content/uploads/2021/09/booking-online-1@2x.webp?x69407"
+                alt="WellnessLiving Marketplace"
+                className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+              />
+            </div>
+            <div className="flex items-center justify-between px-5 py-4 bg-white border-t border-[#f4f4f4]">
+              <div>
+                <p className="text-xs text-[#bbb] mb-0.5">WellnessLiving · 05</p>
+                <p className="text-sm font-semibold text-[#111] group-hover:text-[#1a56ff] transition-colors duration-200">
+                  Booking & Marketplace
+                </p>
+                <p className="text-xs text-[#999] mt-1">8% increase in bookings</p>
+              </div>
+              <span className="text-[#ccc] group-hover:text-[#1a56ff] group-hover:translate-x-1 transition-all duration-200 text-base flex-shrink-0 ml-4">→</span>
+            </div>
+          </Link>
         </div>
       </section>
 

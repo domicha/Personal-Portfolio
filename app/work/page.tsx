@@ -208,7 +208,7 @@ export default function WorkPage() {
       {/* Projects */}
       <div className="divide-y divide-[#ebebeb]">
         {projects.map((p) => (
-          <div key={p.index} className="py-14">
+          <div key={p.index} id={`project-${p.index}`} className="py-14">
             <div className="grid md:grid-cols-12 gap-8">
               {/* Meta */}
               <div className="reveal md:col-span-3">
@@ -233,7 +233,7 @@ export default function WorkPage() {
 
               {/* Content */}
               <div className="reveal md:col-span-9" style={{ transitionDelay: "80ms" }}>
-                <h2 className="text-xl md:text-2xl font-bold text-[#111] mb-4 leading-snug">
+                <h2 className="text-xl md:text-2xl font-bold text-[#111] mb-4 leading-snug transition-colors duration-300 hover:text-[#1a56ff] cursor-default w-fit">
                   {p.title}
                 </h2>
                 <p className="text-sm text-[#666] leading-relaxed mb-4">{p.summary}</p>
@@ -280,7 +280,7 @@ export default function WorkPage() {
                     {p.images.map((img, i) => (
                       <div
                         key={img.src}
-                        className="reveal rounded-xl overflow-hidden border border-[#ebebeb] bg-[#f9f9f9] group"
+                        className="reveal rounded-xl overflow-hidden border border-[#ebebeb] bg-[#f9f9f9] group hover:border-[#1a56ff]/20 hover:shadow-[0_4px_24px_rgba(26,86,255,0.08)] transition-all duration-400"
                         style={{ transitionDelay: `${160 + i * 100}ms` }}
                       >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -288,7 +288,7 @@ export default function WorkPage() {
                           src={img.src}
                           alt={img.alt}
                           loading="lazy"
-                          className="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                          className="w-full h-auto object-cover transition-all duration-500 ease-out group-hover:scale-[1.04] group-hover:brightness-[1.03]"
                         />
                       </div>
                     ))}

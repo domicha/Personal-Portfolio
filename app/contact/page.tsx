@@ -204,11 +204,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="mt-20 pt-8 border-t border-[#ebebeb] flex flex-col md:flex-row items-center justify-between gap-2">
-          <span className="text-xs text-[#ccc]">Michael Do · Product Leader</span>
-          <span className="text-xs text-[#ccc]">Toronto, Canada · {new Date().getFullYear()}</span>
-        </div>
       </section>
 
     </main>

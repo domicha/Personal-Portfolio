@@ -89,13 +89,13 @@ export default function ExperiencePage() {
         <a
           href="/resume.pdf"
           download
-          className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full border border-[#1a56ff]/30 text-[#1a56ff] hover:bg-[#eff3ff] transition-colors w-fit"
+          className="inline-flex items-center gap-2.5 text-sm font-semibold px-6 py-3 rounded-full bg-[#1a56ff] text-white hover:bg-[#1240d6] hover:shadow-[0_4px_20px_rgba(26,86,255,0.35)] active:scale-95 transition-all duration-200 w-fit"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          Download resume
+          Download Resume
         </a>
       </div>
 
