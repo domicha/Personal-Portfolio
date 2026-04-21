@@ -231,16 +231,15 @@ export default function Home() {
               <h1 className="font-extrabold tracking-tight leading-[0.90] mb-8">
                 <span className="block text-[clamp(48px,9vw,118px)] text-[#111]">
                   <span className="word-reveal" style={{ animationDelay: "120ms" }}>Michael</span>{" "}
-                  <span className="word-reveal" style={{ animationDelay: "240ms" }}>Do</span>
-                </span>
+                  <span className="word-reveal" style={{ animationDelay: "240ms" }}>Do</span>                </span>
                 <span className="block text-[clamp(34px,6vw,76px)] text-[#ccc]">
-                  <span className="word-reveal" style={{ animationDelay: "380ms" }}>building</span>{" "}
-                  <span className="word-reveal" style={{ animationDelay: "480ms" }}>digital</span>
+                  <span className="word-reveal" style={{ animationDelay: "440ms" }}>building</span>{" "}
+                  <span className="word-reveal" style={{ animationDelay: "540ms" }}>digital</span>
                 </span>
                 <span className="block text-[clamp(34px,6vw,76px)] text-[#111]">
-                  <span className="word-reveal" style={{ animationDelay: "620ms" }}>products</span>{" "}
-                  <span className="word-reveal" style={{ animationDelay: "720ms" }}>at</span>{" "}
-                  <span className="word-reveal text-blue-shimmer" style={{ animationDelay: "840ms" }}>scale.</span>
+                  <span className="word-reveal" style={{ animationDelay: "640ms" }}>products</span>{" "}
+                  <span className="word-reveal" style={{ animationDelay: "740ms" }}>at</span>{" "}
+                  <span className="word-reveal text-blue-shimmer" style={{ animationDelay: "860ms" }}>scale.</span>
                 </span>
               </h1>
 
@@ -248,8 +247,7 @@ export default function Home() {
               <div className="flex items-start gap-6 mb-10 max-w-xl">
                 <div className="w-px h-12 bg-[#1a56ff] flex-shrink-0 mt-1 opacity-40" />
                 <p className="text-sm md:text-base text-[#888] leading-relaxed">
-                  8 years shipping financial platforms, AI-powered features,
-                  and multi-market products used by millions of Canadians.
+                  8 years driving digital transformation in complex multi-market industries — shipping products that reach millions, reshape customer journeys, and bring AI from concept to production.
                 </p>
               </div>
 
