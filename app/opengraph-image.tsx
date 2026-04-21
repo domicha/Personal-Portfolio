@@ -161,7 +161,7 @@ export default async function Image() {
               lineHeight: 1.25,
             }}
           >
-            Building digital products at scale.
+            Product Leader — Open to new roles.
           </div>
 
           {/* Divider */}

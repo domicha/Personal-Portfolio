@@ -252,7 +252,7 @@ export default function Home() {
               </div>
 
               {/* Stats */}
-              <div ref={statsRef} className="flex flex-wrap gap-10 pb-12 border-b border-[#ebebeb]">
+              <div ref={statsRef} className="grid grid-cols-3 gap-4 pb-12 border-b border-[#ebebeb]">
                 {[
                   { display: `${count8}+`,   label: "Years in product",        yellow: true  },
                   { display: `${count5m}M+`, label: "Users on shipped products", yellow: false },
