@@ -246,7 +246,7 @@ export default function WorkPage() {
                 <div className="flex flex-wrap gap-10 mb-8">
                   {p.impact.map((imp) => (
                     <div key={imp.label}>
-                      <div className="text-2xl font-bold text-[#111] tabular-nums">{imp.metric}</div>
+                      <div className="text-2xl font-bold text-[#1a56ff] tabular-nums">{imp.metric}</div>
                       <div className="text-xs text-[#999] mt-0.5">{imp.label}</div>
                     </div>
                   ))}
@@ -257,7 +257,7 @@ export default function WorkPage() {
                   {p.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-3 py-1 rounded-full border border-[#ebebeb] text-[#888]"
+                      className="tag-pill text-xs px-3 py-1 rounded-full border border-[#ebebeb] text-[#888]"
                     >
                       {tag}
                     </span>

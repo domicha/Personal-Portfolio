@@ -89,7 +89,7 @@ export default function ExperiencePage() {
         <a
           href="/resume.pdf"
           download
-          className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full border border-[#ddd] text-[#111] hover:border-[#aaa] transition-colors w-fit"
+          className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full border border-[#1a56ff]/30 text-[#1a56ff] hover:bg-[#eff3ff] transition-colors w-fit"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -118,7 +118,7 @@ export default function ExperiencePage() {
                 <ul className="space-y-2">
                   {job.bullets.map((b) => (
                     <li key={b} className="text-sm text-[#666] leading-relaxed flex gap-2.5">
-                      <span className="text-[#ccc] flex-shrink-0 mt-1.5 text-xs">—</span>
+                      <span className="text-[#1a56ff] flex-shrink-0 mt-1.5 text-xs opacity-50">—</span>
                       {b}
                     </li>
                   ))}
@@ -147,7 +147,7 @@ export default function ExperiencePage() {
                 {group.items.map((skill) => (
                   <span
                     key={skill}
-                    className="text-xs px-2.5 py-1 rounded-full border border-[#ebebeb] text-[#666]"
+                    className="tag-pill text-xs px-2.5 py-1 rounded-full border border-[#ebebeb] text-[#666]"
                   >
                     {skill}
                   </span>

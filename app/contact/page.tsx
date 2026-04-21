@@ -39,22 +39,22 @@ export default function AboutPage() {
 
       {/* ── Hero: Photo + Intro ── */}
       <section className="max-w-6xl mx-auto px-6 pt-14">
-        <div className="grid md:grid-cols-2 gap-0 min-h-[calc(100vh-56px)]">
+        <div className="grid md:grid-cols-2 gap-0">
 
           {/* Left — Photo */}
-          <div className="relative md:sticky md:top-14 md:h-[calc(100vh-56px)] overflow-hidden">
+          <div className="relative overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/michael-headshot.jpg"
               alt="Michael Do"
-              className="w-full h-64 md:h-full object-cover object-top"
+              className="w-full h-64 md:h-[520px] object-cover object-top"
             />
             {/* Subtle bottom fade on desktop */}
-            <div className="hidden md:block absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+            <div className="hidden md:block absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
           </div>
 
           {/* Right — Content */}
-          <div className="md:pl-16 py-14 md:py-20 flex flex-col justify-center">
+          <div className="md:pl-16 py-10 md:py-14 flex flex-col justify-center">
             <p className="text-xs tracking-[0.18em] uppercase text-[#999] mb-5">
               Product Manager · Toronto
             </p>
@@ -95,8 +95,8 @@ export default function AboutPage() {
       </section>
 
       {/* ── Values ── */}
-      <section className="border-t border-[#ebebeb] max-w-6xl mx-auto px-6 py-20">
-        <p className="text-xs tracking-[0.15em] uppercase text-[#999] mb-12">
+      <section className="border-t border-[#ebebeb] max-w-6xl mx-auto px-6 py-10">
+        <p className="text-xs tracking-[0.15em] uppercase text-[#999] mb-8">
           How I work
         </p>
         <div className="grid md:grid-cols-3 gap-10">
@@ -132,12 +132,12 @@ export default function AboutPage() {
                   href={l.href}
                   target={l.href.startsWith("http") ? "_blank" : undefined}
                   rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="flex items-center justify-between py-4 border-b border-[#ebebeb] group"
+                  className="flex items-center justify-between py-4 border-b border-[#ebebeb] group hover:pl-1 transition-all duration-200"
                 >
-                  <span className="text-sm text-[#666] group-hover:text-[#111] transition-colors">
+                  <span className="text-sm text-[#666] group-hover:text-[#1a56ff] transition-colors">
                     {l.label}
                   </span>
-                  <span className="text-[#ccc] group-hover:text-[#111] group-hover:translate-x-1 transition-all">
+                  <span className="text-[#ccc] group-hover:text-[#1a56ff] group-hover:translate-x-1 transition-all">
                     →
                   </span>
                 </a>
@@ -195,7 +195,7 @@ export default function AboutPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-lg bg-[#111] text-white text-sm font-medium hover:bg-[#333] transition-colors"
+                  className="w-full py-3.5 rounded-lg bg-[#1a56ff] text-white text-sm font-medium hover:bg-[#1240d6] transition-colors"
                 >
                   Send message
                 </button>

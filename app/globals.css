@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+/* ── Electric Blue Tokens ── */
+:root {
+  --blue: #1a56ff;
+  --blue-light: #eff3ff;
+  --blue-dim: rgba(26, 86, 255, 0.07);
+  --blue-glow: rgba(26, 86, 255, 0.18);
+  --blue-border: rgba(26, 86, 255, 0.28);
 }
+
+html { scroll-behavior: smooth; }
 
 body {
   background-color: #ffffff;
@@ -14,16 +21,37 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+/* ── Cursor glow ── */
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--blue-dim) 0%, transparent 68%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  will-change: left, top;
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* ── Scroll progress bar ── */
+.scroll-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--blue);
+  z-index: 200;
+  transition: width 0.05s linear;
 }
+
+/* ── Reveal animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
 .reveal-scale {
   opacity: 0;
@@ -31,19 +59,95 @@ body {
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
+.reveal-scale.visible { opacity: 1; transform: scale(1) translateY(0); }
 
-.reveal-scale.visible {
-  opacity: 1;
-  transform: scale(1) translateY(0);
+/* ── Word reveal ── */
+@keyframes word-up {
+  from { opacity: 0; transform: translateY(36px); filter: blur(6px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0px); }
+}
+.word-reveal {
+  display: inline-block;
+  opacity: 0;
+  animation: word-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-::-webkit-scrollbar {
-  width: 4px;
+/* ── Yellow token ── */
+:root {
+  --yellow: #fde047;
+  --yellow-text: #713f12;
+  --yellow-dot: #854d0e;
 }
-::-webkit-scrollbar-track {
-  background: #fff;
+
+/* ── Blue shimmer text ── */
+@keyframes gradient-shift {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
-::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 2px;
+.text-blue-shimmer {
+  background: linear-gradient(90deg, #111 0%, var(--blue) 40%, #6e9dff 60%, #111 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 5s linear infinite;
 }
+
+/* ── Icon animations ── */
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-7px); }
+}
+@keyframes icon-node-pulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.25); }
+}
+@keyframes icon-line-draw {
+  0%, 15%  { stroke-dashoffset: 40; opacity: 0; }
+  50%, 75% { stroke-dashoffset: 0;  opacity: 1; }
+  100%     { stroke-dashoffset: 0;  opacity: 0.1; }
+}
+@keyframes icon-bar-breathe {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(0.48); }
+}
+@keyframes icon-ripple {
+  0%   { transform: scale(0.5); opacity: 0.75; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+@keyframes icon-orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.icon-bar { transform-box: fill-box; transform-origin: bottom; }
+
+/* ── Nav blue active underline ── */
+.nav-link-active {
+  color: #111 !important;
+  font-weight: 500;
+  position: relative;
+}
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0; right: 0;
+  height: 1.5px;
+  background: var(--blue);
+  border-radius: 1px;
+}
+
+/* ── Tag pills ── */
+.tag-pill {
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.tag-pill:hover {
+  background: var(--blue-light);
+  border-color: var(--blue-border);
+  color: var(--blue);
+}
+
+/* ── Blue scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #fff; }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }

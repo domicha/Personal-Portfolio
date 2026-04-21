@@ -7,7 +7,7 @@ import { useState } from "react";
 const links = [
   { label: "Work", href: "/work" },
   { label: "AI Projects", href: "/ai" },
-  { label: "Experience", href: "/experience" },
+  { label: "Resume", href: "/experience" },
   { label: "About", href: "/contact" },
 ];
 
@@ -31,7 +31,7 @@ export default function Nav() {
                 <Link
                   href={link.href}
                   className={`text-sm transition-colors duration-150 ${
-                    active ? "text-[#111] font-medium" : "text-[#888] hover:text-[#111]"
+                    active ? "nav-link-active" : "text-[#888] hover:text-[#111]"
                   }`}
                 >
                   {link.label}
