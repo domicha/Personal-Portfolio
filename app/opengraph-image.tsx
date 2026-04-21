@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "fs/promises";
 import { join } from "path";
 
-export const alt = "Michael Do — Product Leader";
+export const alt = "Michael Do — AI Product Manager";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -161,7 +161,7 @@ export default async function Image() {
               lineHeight: 1.25,
             }}
           >
-            Product Leader — Open to new roles.
+            Michael Do — AI Product Manager
           </div>
 
           {/* Divider */}
