@@ -32,15 +32,15 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-0">
 
           {/* Left — Photo */}
-          <div className="relative overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/michael-headshot.jpg"
-              alt="Michael Do"
-              className="w-full h-64 md:h-[520px] object-cover object-top"
-            />
-            {/* Subtle bottom fade on desktop */}
-            <div className="hidden md:block absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+          <div className="headshot-border-wrap h-64 md:h-[520px]">
+            <div className="headshot-wrap relative overflow-hidden h-full">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/michael-headshot.jpg"
+                alt="Michael Do"
+                className="headshot-img w-full h-full object-cover object-top"
+              />
+            </div>
           </div>
 
           {/* Right — Content */}
