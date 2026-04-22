@@ -52,7 +52,20 @@ export default function Footer() {
           ))}
         </div>
 
-        <span className="text-xs text-[#ccc]">{new Date().getFullYear()}</span>
+        <a
+          href="https://claude.ai/code"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 text-xs text-[#bbb] hover:text-[#111] transition-colors duration-200"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C12 2 13.5 7 17 8.5C13.5 10 12 15 12 15C12 15 10.5 10 7 8.5C10.5 7 12 2 12 2Z" fill="currentColor" />
+            <path d="M19 14C19 14 19.75 16.5 21.5 17.25C19.75 18 19 20.5 19 20.5C19 20.5 18.25 18 16.5 17.25C18.25 16.5 19 14 19 14Z" fill="currentColor" opacity="0.6" />
+            <path d="M5 3C5 3 5.75 5.5 7.5 6.25C5.75 7 5 9.5 5 9.5C5 9.5 4.25 7 2.5 6.25C4.25 5.5 5 3 5 3Z" fill="currentColor" opacity="0.4" />
+          </svg>
+          Built with Claude Code
+        </a>
+
       </div>
     </footer>
   );
