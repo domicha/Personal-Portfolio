@@ -26,13 +26,13 @@ const projects: {
     url: "https://www.scotiawealthmanagement.com/ca/en/services/wealth-mobile-app.html",
     urlLabel: "scotiawealthmanagement.com",
     summary:
-      "Led the strategy and launch of the Scotia Wealth Management mobile app — giving 200,000 wealth clients secure, self-serve access to their full portfolio for the first time. The app provides a unified view across ScotiaMcLeod, Scotia iTRADE, Scotia Jarislowsky Fraser, Scotiatrust, and Private Investment Counsel accounts.",
+      "Led end-to-end strategy and launch of the Scotia Wealth Management mobile app — bringing 40K wealth clients and $436B in AUM onto a unified self-serve digital experience for the first time. The app consolidated five wealth divisions (ScotiaMcLeod, Scotia iTRADE, Jarislowsky Fraser, Scotiatrust, and Private Investment Counsel) into a single authenticated experience, launching to 25K Canadian clients and scaling across 5 international markets.",
     product:
-      "The app delivers biometric sign-in, interactive portfolio charts, asset mix breakdowns, holdings detail, transaction history, and document management for statements and tax slips — all within a single authenticated experience shared with the existing Scotiabank app.",
+      "Built on top of Scotiabank's existing app infrastructure, the platform delivers biometric sign-in, real-time portfolio dashboards, asset mix breakdowns, holdings detail, transaction history, and document management for statements and tax slips. Owned the multi-quarter roadmap for self-service transactions, advisor workflows, and real-time data integrations — alongside API and service-layer strategy that standardized contracts and cut duplicate build across markets.",
     impact: [
-      { metric: "200K", label: "wealth clients enabled" },
-      { metric: "5", label: "international markets" },
-      { metric: "4", label: "wealth divisions unified under one app" },
+      { metric: "14%", label: "funded account growth in month one" },
+      { metric: "45%", label: "onboarding completion, up from 30%" },
+      { metric: "1.5d", label: "time-to-first-trade, down from 4 days" },
     ],
     tags: ["Wealth Management", "Mobile", "Platform Strategy", "API Architecture"],
     images: [
@@ -59,13 +59,13 @@ const projects: {
     url: "https://www.scotiabank.com/ca/en/personal/bank-your-way/app-and-online/online-banking.html",
     urlLabel: "scotiabank.com — online banking",
     summary:
-      "Owned the strategy and end-to-end GTM rollout of the redesigned Scotia Online Banking platform, now used by 2 million+ active Canadians. Led a multi-year programme to modernize the web client while maintaining continuity for existing users — balancing speed of delivery with compliance, accessibility, and fraud prevention requirements.",
+      "Owned strategy and full GTM execution for the redesign of Scotia's online banking platform, now used by 2 million+ active Canadians. Led the modernization of a legacy web client through a phased migration that de-risked delivery for existing users while meeting compliance, accessibility, and fraud prevention requirements across a complex, high-traffic platform.",
     product:
-      "The platform covers bill payment with recurring options, Interac e-Transfer, international money transfers via Western Union, investment monitoring, free TransUnion credit score, Scotia InfoAlerts, and direct deposit setup — all within a refreshed, accessible interface.",
+      "The platform covers bill payment with recurring options, Interac e-Transfer, international money transfers, investment monitoring, free TransUnion credit score, Scotia InfoAlerts, and direct deposit setup. Drove a rigorous A/B testing and experimentation programme — using customer research and performance data to continuously reduce friction and grow engagement across retail and business segments.",
     impact: [
-      { metric: "2M+", label: "active users" },
+      { metric: "2M+", label: "active Canadian users" },
       { metric: "+20", label: "NPS improvement" },
-      { metric: "30%", label: "reduction in user friction" },
+      { metric: "20%", label: "growth in money transfers" },
     ],
     tags: ["Web Platform", "GTM", "A/B Testing", "Accessibility"],
     images: [
@@ -84,15 +84,15 @@ const projects: {
     url: "https://www.scotiabank.com/ca/en/personal/ways-to-bank/mobile-tablet/mobile-banking-app.html",
     urlLabel: "scotiabank.com — mobile app",
     summary:
-      "Delivered a new unified mobile banking experience adopted by 3 million+ active users. Owned product strategy and GTM across key product lines including InfoAlerts, SelectPay (BNPL), and Money Movement — while driving a 10% revenue lift through new feature adoption.",
+      "Delivered a new unified mobile banking experience adopted by 3 million+ active users. Consolidated key product lines — InfoAlerts, SelectPay (BNPL), and Money Movement — into a single cohesive app, and introduced AI-powered bill payment features that improved transaction success by 7%. Partnered with analytics to turn large datasets into segmentation insights across retail, SMB, and wealth.",
     product:
-      "The app features quick-access shortcuts for everyday tasks, fast bill payments and transfers, in-app Help Center, optimized app size for lightweight performance, dynamic font sizing, screen reader support, and multi-factor authentication — with a design built for both iOS and Android.",
+      "The app features quick-access shortcuts for everyday tasks, fast bill payments and transfers, an in-app Help Center, and optimized performance across iOS and Android. AI-powered routing logic was embedded directly into the payment and alerts experience — improving reliability and reducing failed transactions at scale.",
     impact: [
       { metric: "3M+", label: "active users" },
       { metric: "20%", label: "engagement increase" },
-      { metric: "10%", label: "revenue lift" },
+      { metric: "7%", label: "transaction success lift via AI bill pay" },
     ],
-    tags: ["Mobile", "BNPL", "Money Movement", "iOS & Android"],
+    tags: ["Mobile", "BNPL", "AI Features", "iOS & Android"],
     images: [
       {
         src: "/scotia-mobile-home.webp",
@@ -127,15 +127,15 @@ const projects: {
         >
           migrate 130+ Postmedia media brand sites
         </a>{" "}
-        — including the National Post — from WordPress to a Python/Django platform. Developed GTM strategy with editorial and senior leadership, and partnered with monetization teams to improve ad inventory and advertiser value.
+        — including the National Post — from WordPress to Python/Django. Owned the GTM strategy with editorial and senior leadership, and partnered closely with monetization teams to optimize ad inventory performance and improve advertiser value across the network.
       </>
     ),
     product:
-      "The relaunch modernized the technical foundation across the entire Postmedia network, enabling faster page loads, improved content management workflows, and a more scalable ad delivery architecture — benefiting both editorial teams and digital advertisers.",
+      "The relaunch replaced a fragmented legacy CMS with a scalable Python/Django platform — enabling faster page loads, streamlined content publishing workflows, and a more efficient ad delivery architecture. The modernized stack reduced operational overhead by 40% while improving reader experience and CTR across 130+ brand properties.",
     impact: [
-      { metric: "130+", label: "media brand sites relaunched" },
-      { metric: "27%", label: "engagement growth" },
-      { metric: "40%", label: "operational cost reduction" },
+      { metric: "130+", label: "media brand sites migrated" },
+      { metric: "27%", label: "reader engagement growth" },
+      { metric: "22%", label: "CTR improvement on ad inventory" },
     ],
     tags: ["Platform Migration", "Media", "Monetization", "Python/Django"],
     images: [
@@ -154,13 +154,13 @@ const projects: {
     url: "https://www.wellnessliving.com/features/online-booking/",
     urlLabel: "wellnessliving.com",
     summary:
-      "Defined the vision and roadmap for WellnessLiving's SaaS fitness platform, focusing on the client-facing booking experience and marketplace. Launched a redesigned booking flow that increased client bookings by 8% and integrated payment enablement with external partners to create a new recurring revenue stream.",
+      "Defined the vision and roadmap for WellnessLiving's SaaS fitness platform across mobile and web, with a focus on growing adoption among small fitness and wellness businesses. Led the redesign of the core booking and marketplace experience, and built payments enablement with external partners to create a net-new recurring revenue stream for the business.",
     product:
-      "The platform offers a branded client booking portal, automated waitlist management, Google Search and Maps integration, scheduling widgets for websites and social media, virtual class streaming, automated notifications (email, SMS, push), and staff management tools — built for fitness and wellness small businesses.",
+      "The platform offers a branded client booking portal, automated waitlist management, Google Search and Maps integration, scheduling widgets for websites and social media, virtual class streaming, and automated notifications via email, SMS, and push — purpose-built for small fitness and wellness operators managing staff, schedules, and client acquisition.",
     impact: [
       { metric: "8%", label: "increase in client bookings" },
-      { metric: "New", label: "recurring revenue stream via payments" },
-      { metric: "↑", label: "small business adoption" },
+      { metric: "New", label: "recurring revenue via payments integration" },
+      { metric: "↑", label: "SMB adoption and platform retention" },
     ],
     tags: ["SaaS", "Marketplace", "Payments", "Fitness Tech"],
     images: [

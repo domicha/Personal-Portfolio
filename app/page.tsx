@@ -121,14 +121,14 @@ const navLinks = [
     index: "02",
     label: "Resume",
     description: "8+ years of product leadership across financial services and beyond.",
-    href: "/experience",
+    href: "/resume",
     icon: <ExperienceIcon />,
   },
   {
     index: "03",
     label: "About & Contact",
     description: "Who I am, how I work, and how to reach me.",
-    href: "/contact",
+    href: "/about",
     icon: <ContactIcon />,
   },
 ];

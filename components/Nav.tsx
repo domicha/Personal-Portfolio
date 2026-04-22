@@ -6,8 +6,8 @@ import { useState } from "react";
 
 const links = [
   { label: "Work", href: "/work" },
-  { label: "Resume", href: "/experience" },
-  { label: "About", href: "/contact" },
+  { label: "Resume", href: "/resume" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Nav() {

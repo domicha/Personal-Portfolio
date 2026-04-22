@@ -7,72 +7,87 @@ export const metadata: Metadata = {
 const experience = [
   {
     company: "Scotiabank Digital",
-    role: "Product Lead — Wealth Management",
+    role: "Product Lead, Domestic and International Digital Platforms",
     period: "Oct 2024 — Present",
     location: "Toronto, ON",
     bullets: [
-      "Define and drive product strategy across Canada, Mexico, Chile, Peru, and the Caribbean, aligning global stakeholders on execution, scalability, and long-term vision.",
-      "Launched the Canadian Wealth management app enabling 200,000 wealth clients to access in-depth portfolio details.",
-      "Lead roadmap for self-service trading, full-service wealth management, and market data integration.",
-      "Directed API strategy, designing standardized contracts that reduced duplication and accelerated delivery timelines.",
-      "Managed vendor and partner relationships to deliver data-driven solutions that elevate advisor effectiveness.",
-      "Partnered with compliance, legal, and risk teams to ensure products adhered to multi-jurisdictional regulations.",
+      "Lead product strategy for a digital platform across 5 international markets supporting 40K wealth clients and $436B in AUM. Launched the Canadian Wealth Management app to 25K Canadian clients.",
+      "Own client onboarding and Direct Investing acquisition outcomes: grew funded accounts 14% in the first month, improved onboarding completion 30% to 45%, and cut time-to-first-trade from 4 days to 1.5 days.",
+      "Owned a multi-quarter roadmap for self-service transactions, advisor workflows, and real-time data integrations.",
+      "Directly manage 2 PMs and 2 business analysts, setting priorities, coaching on craft, and building the senior PM bench.",
+      "Drove executive alignment on standardized data models, design patterns, and reusable frameworks, cutting duplicate build across markets and accelerating time-to-market.",
+      "Partnered with compliance, legal, and risk to ship products in highly regulated, multi-jurisdictional environments at pace.",
+      "Led API and service-layer strategy with engineering, defining standardized contracts that cut duplicate work.",
     ],
   },
   {
     company: "Scotiabank Digital",
-    role: "Senior Product Manager — Retail & Business Platforms",
+    role: "Senior Product Manager, Retail & Business Platforms",
     period: "Aug 2021 — Sep 2024",
     location: "Toronto, ON",
     bullets: [
-      "Delivered the new Scotiabank web client platform adopted by 2 million+ active Canadians through a full GTM rollout.",
+      "Delivered the new Scotiabank web client platform for Canadians adopted by 2 million+ active users through the GTM rollout.",
       "Owned strategy and roadmap for mobile app and web platforms, increasing engagement by 12% YoY.",
-      "Championed A/B testing and experimentation: +20 NPS, 30% reduction in user friction, 20% growth in international money transfers.",
-      "Spearheaded AI/ML personalization initiatives, achieving a 15% uplift in activation and clickthrough rates.",
-      "Mentored and coached PMs and cross-functional leads across the organization.",
+      "Championed A/B testing and experimentation, achieving +20 NPS, 30% less user friction, and 20% growth in money transfers.",
+      "Used customer research, competitive analysis, and performance data to identify growth opportunities and shape roadmap priorities.",
+      "Led modernization of a legacy platform with a phased roadmap and migration strategy that de-risked delivery for existing users.",
+      "Mentored and coached PMs and cross-functional leads, strengthening organizational product craft and leadership pipeline.",
     ],
   },
   {
     company: "Scotiabank Digital",
-    role: "Product Manager — Retail & Business Platforms",
+    role: "Product Manager, Retail & Business Platforms",
     period: "Oct 2020 — Jul 2021",
     location: "Toronto, ON",
     bullets: [
       "Delivered a new unified mobile app experience adopted by 3 million+ active users, increasing engagement by 20%.",
       "Owned product strategy and GTM for InfoAlerts, SelectPay (BNPL), and Money Movement, driving a 10% revenue lift.",
       "Introduced AI-powered bill payment features that improved transaction success by 7%.",
-      "Collaborated with analytics teams to translate large datasets into actionable segmentation insights.",
+      "Partnered with analytics teams to turn large data sets into insights, shaping segmentation across retail, SMB, and wealth.",
+      "Shipped go-to-market initiatives that raised customer satisfaction scores and reduced downstream support and operational costs.",
     ],
   },
   {
     company: "Postmedia Digital",
-    role: "Product Manager — News & Engagement",
+    role: "Product Manager, News & Engagement",
     period: "Aug 2019 — Sep 2020",
     location: "Toronto, ON",
     bullets: [
-      "Led 10+ engineers and designers to relaunch 130+ media brand sites (WordPress → Python/Django), achieving 27% engagement growth and 40% operational cost reduction.",
+      "Led a cross-functional team of 10+ engineers and designers to relaunch 130+ media brand sites, moving from WordPress to Python/Django; +27% engagement, -40% cost.",
       "Partnered with monetization teams to optimize ad inventory, improving CTR by 22%.",
-      "Developed GTM strategy with editorial and senior leadership, emphasizing advertiser value and improved UX.",
+      "Developed GTM strategy in collaboration with editorial and senior leadership, emphasizing advertiser value and improved UX.",
     ],
   },
   {
     company: "WellnessLiving Systems",
-    role: "Product Manager — SaaS Platform",
+    role: "Product Manager, SaaS Platform",
     period: "Mar 2019 — Jul 2019",
     location: "Toronto, ON",
     bullets: [
-      "Defined vision and roadmap for a SaaS fitness platform across mobile and web.",
+      "Defined vision and roadmap for SaaS fitness software across mobile and web platforms, driving adoption with small businesses.",
       "Launched redesigned marketplace and booking flows, increasing client bookings by 8%.",
-      "Integrated payments with external partners, creating a new recurring revenue stream.",
+      "Integrated payments enablement with external partners, creating a new recurring revenue stream.",
     ],
   },
 ];
 
 const skills = [
-  { category: "Strategy", items: ["Product Vision", "Roadmapping", "OKRs", "Business Cases", "GTM"] },
-  { category: "Discovery", items: ["User Research", "JTBD", "Journey Mapping", "Competitive Analysis"] },
-  { category: "Delivery", items: ["Agile / Scrum", "A/B Testing", "Experimentation", "API Strategy"] },
-  { category: "Domain", items: ["Fintech", "Wealth Management", "Digital Banking", "SaaS", "Media"] },
+  {
+    category: "AI & Emerging Tech",
+    items: ["Claude", "Cursor", "LLM-powered features", "Prompt Engineering", "Vibe Coding", "AI-assisted Prototyping"],
+  },
+  {
+    category: "Product Management",
+    items: ["Roadmapping", "OKRs", "GTM", "Agile / Scrum", "Discovery", "A/B Testing", "Competitive Analysis"],
+  },
+  {
+    category: "Leadership",
+    items: ["People Management", "Coaching & Mentoring", "Cross-functional Leadership", "Executive Stakeholder Mgmt"],
+  },
+  {
+    category: "Tools",
+    items: ["Jira", "Confluence", "Figma", "SQL", "Adobe Analytics", "Tableau", "API Design"],
+  },
 ];
 
 export default function ExperiencePage() {
@@ -88,7 +103,7 @@ export default function ExperiencePage() {
         </div>
         <a
           href="/resume.pdf"
-          download
+          download="Michael_Do_Resume_2026.pdf"
           className="inline-flex items-center gap-2.5 text-sm font-semibold px-6 py-3 rounded-full bg-[#1a56ff] text-white hover:bg-[#1240d6] hover:shadow-[0_4px_20px_rgba(26,86,255,0.35)] active:scale-95 transition-all duration-200 w-fit"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
