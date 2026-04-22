@@ -119,20 +119,13 @@ const navLinks = [
   },
   {
     index: "02",
-    label: "AI Projects",
-    description: "AI-powered features, personalization, and intelligent automation.",
-    href: "/ai",
-    icon: <AIIcon />,
-  },
-  {
-    index: "03",
     label: "Resume",
     description: "8+ years of product leadership across financial services and beyond.",
     href: "/experience",
     icon: <ExperienceIcon />,
   },
   {
-    index: "04",
+    index: "03",
     label: "About & Contact",
     description: "Who I am, how I work, and how to reach me.",
     href: "/contact",

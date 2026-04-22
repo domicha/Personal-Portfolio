@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import Script from "next/script";
 
 const links = [
   { label: "ddomichael.work@gmail.com", href: "mailto:ddomichael.work@gmail.com" },
-  { label: "linkedin.com/in/domicha", href: "https://www.linkedin.com/in/domicha" },
+  { label: "linkedin.com/in/michael-do-product", href: "https://www.linkedin.com/in/michael-do-product/" },
   { label: "647-686-7675", href: "tel:6476867675" },
 ];
 
@@ -24,16 +24,6 @@ const values = [
 ];
 
 export default function AboutPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const mailto = `mailto:ddomichael.work@gmail.com?subject=Hello from ${form.name}&body=${encodeURIComponent(form.message)}%0A%0AReply to: ${form.email}`;
-    window.location.href = mailto;
-    setSent(true);
-  };
-
   return (
     <main className="min-h-screen">
 
@@ -118,7 +108,29 @@ export default function AboutPage() {
           Let&apos;s build something great.
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-8 items-start">
+          {/* LinkedIn Badge */}
+          <div className="w-full flex">
+            <div
+              className="badge-base LI-profile-badge w-full"
+              data-locale="en_US"
+              data-size="large"
+              data-theme="dark"
+              data-type="HORIZONTAL"
+              data-vanity="michael-do-product"
+              data-version="v1"
+              style={{ minHeight: "300px" }}
+            >
+              <a
+                className="badge-base__link LI-simple-link"
+                href="https://ca.linkedin.com/in/michael-do-product?trk=profile-badge"
+                style={{ display: "none" }}
+              >
+                Michael Do
+              </a>
+            </div>
+          </div>
+
           {/* Links */}
           <div>
             <p className="text-base text-[#666] leading-relaxed mb-10 max-w-sm">
@@ -144,68 +156,14 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-
-          {/* Form */}
-          <div>
-            {sent ? (
-              <div className="border border-[#ebebeb] rounded-xl p-10 text-center">
-                <p className="text-xl font-bold text-[#111] mb-2">Message sent.</p>
-                <p className="text-sm text-[#888]">Thanks — I&apos;ll be in touch shortly.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label className="block text-xs uppercase tracking-[0.1em] font-medium text-[#999] mb-1.5">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full border border-[#ddd] rounded-lg px-4 py-3 text-sm text-[#111] placeholder-[#ccc] focus:outline-none focus:border-[#999] transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs uppercase tracking-[0.1em] font-medium text-[#999] mb-1.5">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full border border-[#ddd] rounded-lg px-4 py-3 text-sm text-[#111] placeholder-[#ccc] focus:outline-none focus:border-[#999] transition-colors"
-                    placeholder="you@company.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs uppercase tracking-[0.1em] font-medium text-[#999] mb-1.5">
-                    Message
-                  </label>
-                  <textarea
-                    required
-                    rows={5}
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full border border-[#ddd] rounded-lg px-4 py-3 text-sm text-[#111] placeholder-[#ccc] focus:outline-none focus:border-[#999] transition-colors resize-none"
-                    placeholder="What are you working on?"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full py-3.5 rounded-lg bg-[#1a56ff] text-white text-sm font-medium hover:bg-[#1240d6] transition-colors"
-                >
-                  Send message
-                </button>
-              </form>
-            )}
-          </div>
         </div>
 
       </section>
 
+      <Script
+        src="https://platform.linkedin.com/badges/js/profile.js"
+        strategy="lazyOnload"
+      />
     </main>
   );
 }

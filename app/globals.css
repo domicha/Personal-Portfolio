@@ -162,3 +162,9 @@ body {
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: #fff; }
 ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
+
+/* ── LinkedIn badge full-width stretch ── */
+.LI-profile-badge iframe {
+  width: 100% !important;
+  min-height: 300px;
+}
