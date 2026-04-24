@@ -4,8 +4,7 @@ import Script from "next/script";
 
 const links = [
   { label: "ddomichael.work@gmail.com", href: "mailto:ddomichael.work@gmail.com" },
-  { label: "linkedin.com/in/michael-do-product", href: "https://www.linkedin.com/in/michael-do-product/" },
-  { label: "647-686-7675", href: "tel:6476867675" },
+  { label: "linkedin.com/in/domicha", href: "https://www.linkedin.com/in/domicha" },
 ];
 
 const values = [
